@@ -12,21 +12,12 @@
   </body>
     <script type="text/javascript">
 <!--
-$(function() {
+function noscroll() {
+  window.scrollTo( 0, 0 );
+}
 
-    var fixed = document.getElementById('fixed'), overflow;
-
-    $(window).on('load resize', function() {
-
-    overflow = fixed.scrollHeight-$('#fixed').height();
-    });
-
-    fixed.on('touchmove', function() {
-
-    if (overflow) return true;
-    else return false;
-    });
-});
+// add listener to disable scroll
+window.addEventListener('scroll', noscroll);
 //-->
   </script>
 </html>
